@@ -12,14 +12,9 @@ Practical interview template is a personal project built to help in interviews i
 
 Clone the repository
 
-```sh
-$ git clone --depth=1 https://github.com/gugamm/practical-interview-template.git <your-project-name>
-```
-
 Then install the dependencies
 
 ```sh
-$ cd <your-project-name>
 $ npm install
 ```
 
