@@ -1,0 +1,38 @@
+EXERCICIO DO MARKETPLACE
+  - Dado uma lista de empréstimos e de investimentos, queremos gerar uma nova lista para exibir os empréstimos no marketplace.
+  - Cada item do marketplace contem os seguintes dados (id, totalRequestedAmount, expiresAt, category, totalInvestedAmount)
+  - Cada empréstimos é composto de (id, totalRequestedAmountCents, category, expiresAt)
+  - Cada investimento (id, totalInvestedAmountCents, loanId)
+  - A lista do marketplace deve ser ordenada por categoria e por data de expiração. Ou seja, digamos que tenhamos 2 empréstimos na mesma categoria "X". Queremos priorizar o empréstimo que expirará em breve primeiro.
+  - As categorias são (X, Y, Z), sendo que seguem a seguinte ordem de prioridade Z > X > Y
+
+MAIN: 
+export const generateMarketplaceList = (loanList: Loan[], investmentList: Investment[]): MarketplaceItem[] => {}
+
+TYPES:
+export enum Category {
+  X = 'X',
+  Y = 'Y',
+  Z = 'Z'
+}
+
+export interface Loan {
+  id: string,
+  totalRequestedAmountCents: number,
+  category: Category,
+  expiresAt: Date
+}
+
+export interface Investment {
+  id: string,
+  totalInvestedAmountCents: number,
+  loanId: string
+}
+
+export interface MarketplaceItem {
+  id: string,
+  totalRequestedAmount: number,
+  category: Category,
+  totalInvestmentAmount: number,
+  expiresAt: Date
+}
