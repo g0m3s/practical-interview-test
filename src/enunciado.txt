@@ -1,10 +1,16 @@
-EXERCICIO DO MARKETPLACE
-  - Dado uma lista de empréstimos e de investimentos, queremos gerar uma nova lista para exibir os empréstimos no marketplace.
-  - Cada item do marketplace contem os seguintes dados (id, totalRequestedAmount, expiresAt, category, totalInvestedAmount)
-  - Cada empréstimos é composto de (id, totalRequestedAmountCents, category, expiresAt)
-  - Cada investimento (id, totalInvestedAmountCents, loanId)
-  - A lista do marketplace deve ser ordenada por categoria e por data de expiração. Ou seja, digamos que tenhamos 2 empréstimos na mesma categoria "X". Queremos priorizar o empréstimo que expirará em breve primeiro.
+EXERCÍCIO DO MARKETPLACE
+
+  - Contexto: Imagine uma aplicação que possui uma lista de pedidos de empréstimos onde outras pessoas podem comprar cotas de um desses pedidos. Nessa lista é possível ver quanto foi solicitado, quanto foi arrecadado até o momento, quando o pedido irá expirar, além da categoria do empréstimo (ex: categoria "investir no meu negócio", categoria "comprar um carro")
+
+  - Dado um array de 'empréstimos (Loan[])' e de investimentos (Investment[]), queremos gerar um novo array para exibir os empréstimos no marketplace (MarketplaceItem[]).
+
+  - A lista do marketplace deve ser ordenada por data de expiração. Ou seja, digamos que tenhamos 2 empréstimos, um com data de expiração em 11/02 e outro com data de expiração 09/02. Queremos priorizar o empréstimo expirará primeiro.
+
+* Bônus:
+
+  - Além de ser organizada por data de expiração, a lista do deve ser ordenada por categoria.
   - As categorias são (X, Y, Z), sendo que seguem a seguinte ordem de prioridade Z > X > Y
+  - Ou seja, queremos que os empréstimos da categoria "Z" apareçam primeiro e que dentro da categoria, os empréstimos com data de expiração mais recente apareçam primeiro.
 
 MAIN: 
 export const generateMarketplaceList = (loanList: Loan[], investmentList: Investment[]): MarketplaceItem[] => {}
